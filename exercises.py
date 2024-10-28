@@ -44,7 +44,8 @@ print('Exercise 2:', simple_interest(1000, 5, 2))
 
 
 def apply_discount(price, discount):
-    return (price - (price * (discount/100)))
+    discount_value = price * (discount/100)
+    return (price - discount_value)
 
 
 print('Exercise 3:', apply_discount(100, 25))
