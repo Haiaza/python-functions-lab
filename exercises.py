@@ -63,6 +63,28 @@ print('Exercise 3:', apply_discount(100, 25))
 # convert_temperature(32, 'F') should return 0.0.
 #
 # Define the function and then call it below.
+def convert_temperature(temp, unit):
+    # loop asking the user for their input of temp and unit
+    while True:
+        # temp must be a number
+        try:
+            user_temp = input("Please input a temperature ")
+            temp = float(user_temp)
+
+            user_unit = input("Please input a temperature unit")
+
+        except ValueError:
+            print("This isnt a good value")
+
+        
+        
+        # if int(user_temp) == ValueError:     1st attempt
+        #     print("This isnt a good value")  
+
+# string = "String"
+# int(string)
+# print(string)
+        
 
 
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
