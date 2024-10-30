@@ -64,27 +64,37 @@ print('Exercise 3:', apply_discount(100, 25))
 #
 # Define the function and then call it below.
 def convert_temperature(temp, unit):
+    # the accepted units
+    accepted_units = ["C", "F"]
     # loop asking the user for their input of temp and unit
     while True:
         # temp must be a number
         try:
-            user_temp = input("Please input a temperature ")
-            temp = float(user_temp)
+            temp = float(input("Please input a temperature "))
+            
+            unit = input("Please input a temperature unit ").upper()
 
-            user_unit = input("Please input a temperature unit")
+            # check whether the users unit is inside the accpepted units list
+            if unit not in accepted_units:
+                print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+                continue        # restart the loop now that instruction has been given
+
+            # if both temp and unit pass, break out of the while loop
+            break
 
         except ValueError:
-            print("This isnt a good value")
+            print("This isnt a good value, try something numeric.")
 
-        
-        
-        # if int(user_temp) == ValueError:     1st attempt
-        #     print("This isnt a good value")  
+    # Convert temperature based on unit
+    if unit == "C":
+        converted = (temp * 9/5) + 32  # Convert to Fahrenheit
+        print(f"{temp}°C is {converted}°F.")
+    elif unit == "F":
+        converted = (temp - 32) * 5/9  # Convert to Celsius
+        print(f"{temp}°F is {converted}°C.")
 
-# string = "String"
-# int(string)
-# print(string)
-        
+
+
 
 
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
