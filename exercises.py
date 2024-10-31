@@ -110,6 +110,22 @@ print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
 #
 # Define the function and then call it below.
 
+# take the range of numbers based on user input and add them all
+
+def sum_to(number):
+    while True:
+        try:
+            
+            total = 0
+            for i in range(1, number + 1):  # Start from 1, go up to and INCLUDE the number
+                total += i
+                
+            return total 
+            
+        except ValueError:
+            print("Please enter a valid number.")
 
 
-print('Exercise 5:', sum_to(6)) 
+
+
+print('Exercise 5:', sum_to(10)) 
