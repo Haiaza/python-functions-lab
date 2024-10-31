@@ -160,6 +160,8 @@ print('Exercise 6:', largest(1, 7, 3))
 #
 # Write your function and test its output below.
 
+def calculate_tip(bill, tip):
+    return bill * tip/100
 
 
 print('Exercise 7:', calculate_tip(50, 20))
