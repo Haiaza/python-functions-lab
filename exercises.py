@@ -202,6 +202,14 @@ print('Exercise 8:', product(2, 10, 5))
 #
 # Define the function and then call it below.
 
-
+def basicCalculator(num1, num2, operation):
+    if operation == "add":
+        return num1 + num2
+    elif operation == "subtract":
+        return num1 - num2
+    elif operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        return num1 / num2
 
 print('Exercise 9 Result:', basicCalculator(10, 5, "subtract"))
